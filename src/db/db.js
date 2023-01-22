@@ -1,0 +1,13 @@
+const mongoose = require('mongoose')
+
+mongoose.set('strictQuery', true);
+
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+}).then(() => console.log('Connexion à MongoDB réussie !'))
+.catch(() => console.log('Connexion à MongoDB échouée !'))
+
+
+
+module.exports = mongoose
