@@ -5,7 +5,7 @@ const ArgonauteCtrl = require('../controllers/argonaute')
 
 router.post('/createArgonaute', ArgonauteCtrl.createArgonaute);
 router.get('/getAllArgonautes', ArgonauteCtrl.getAllArgonautes);
-router.patch('/updateArgonaute', ArgonauteCtrl.updateArgonaute);
-router.delete('/deleteArgonaute', ArgonauteCtrl.deleteArgonaute);
+router.patch('/updateArgonaute/:id', ArgonauteCtrl.updateArgonaute);
+router.delete('/deleteArgonaute/:id', ArgonauteCtrl.deleteArgonaute);
 
 module.exports = router;
