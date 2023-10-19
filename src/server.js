@@ -15,7 +15,7 @@ const normalizePort = (val) => {
   }
   return false;
 };
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 //Fonction qui recherche les différentes erreurs et les gère de manière appropriée. Elle est ensuite enregistrée dans le serveur.
 const errorHandler = (error) => {

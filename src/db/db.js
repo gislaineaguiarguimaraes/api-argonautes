@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-mongoose.set("strictQuery", true);
+mongoose.set("strictQuery", false);
 
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://gislaine:70227589@cluster0.jygmls9.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch((er) => console.log(er + "Connexion à MongoDB échouée !"));
 
